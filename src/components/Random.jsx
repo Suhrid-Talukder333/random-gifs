@@ -6,7 +6,7 @@ const Random = () => {
     const { gif, fetchData } = useGif();
 
   return (
-    <div className="container col-md-6">
+    <div className="container col-md-6 p-5">
       <h1 className="lead text-secondary">Random GIFF</h1>
       <img className="img-fluid" src={gif} alt="random gif"></img>
       <div className='container p-2'>

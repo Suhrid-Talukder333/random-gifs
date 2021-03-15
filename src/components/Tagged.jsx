@@ -1,15 +1,16 @@
-
 import useGif from "./useGif";
+import { useState } from "react";
 
-const Random = () => {
-  const { gif, fetchData } = useGif();
-
+const Tagged = () => {
+  const [tag, setTag] = useState("Dog");
+  const { gif, fetchData } = useGif(tag);
   return (
-    <div className="container col-md-6">
-      <h1 className="lead text-secondary">Random GIFF</h1>
-      <img className="img-fluid" src={gif} alt="random gif"></img>
+    <div className="container col-md-6 p-5">
+      <h1 className="lead text-warning">{tag} GIFF</h1>
+      <img className="img-fluid" src={gif} alt="Tagged gif"></img>
       <div className="container p-2">
-        <button className="btn btn-primary" onClick={fetchData}>
+        <input type="text" onChange={(e) => setTag(e.target.value)}></input>
+        <button className="btn btn-primary m-2" onClick={() => fetchData(tag)}>
           Generate
         </button>
       </div>
@@ -17,4 +18,4 @@ const Random = () => {
   );
 };
 
-export default Random;
+export default Tagged;

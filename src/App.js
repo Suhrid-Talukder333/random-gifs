@@ -1,6 +1,6 @@
-
-import Random from './components/Random';
-
+import Random from "./components/Random";
+import Tagged from "./components/Tagged";
+import vid from './video/Purple Flow Of Colors.mp4';
 const App = () => {
   return (
     <>
@@ -11,8 +11,14 @@ const App = () => {
           </a>
         </div>
       </nav>
-      <div className="row p-3">
-        <Random />
+      <video autoPlay muted loop id="myVideo">
+        <source src={vid} type="video/mp4" />
+      </video>
+      <div>
+        <div className="row p-3 home">
+          <Random />
+          <Tagged />
+        </div>
       </div>
     </>
   );
