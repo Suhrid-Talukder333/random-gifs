@@ -1,17 +1,19 @@
-import "./App.css";
+
+import Random from './components/Random';
+
 const App = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Suhrid
           </a>
         </div>
       </nav>
-        <div className="fullpage row">
-            <div className="container"></div>
-        </div>
+      <div className="row p-3">
+        <Random />
+      </div>
     </>
   );
 };
